@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "agrid-pagination"
+  "defaultProject": "agrid-pagination",
+  "cli": {
+    "analytics": "20723e70-f3b3-4104-a178-646e1fd75200"
+  }
 }
