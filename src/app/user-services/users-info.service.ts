@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
@@ -7,8 +7,12 @@ import {Observable} from 'rxjs';
 })
 export class UsersInfoService {
 
-  constructor(private httpClient: HttpClient ) { }
-  getUsersData(): Observable<any>{
-   return this.httpClient.get('https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/olympicWinnersSmall.json');
+  constructor(private httpClient: HttpClient) {
+  }
+
+  getUsersData(): Observable<any> {
+
+    const baseUrl = 'https://raw.githubusercontent.com/ag-grid/ag-grid-docs/master/src/olympicWinnersSmall.json';
+    return this.httpClient.get<any>(baseUrl);
   }
 }
